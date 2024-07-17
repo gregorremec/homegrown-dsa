@@ -12,7 +12,7 @@
     Space: O(1) - only temp vars to swap
 """
 
-def swap_insertion_sort(L):
+def _swap_insertion_sort(L):
     """Do direct swapping insertion sort on L and return sorted list."""
 
     for i in range(1, len(L)):
@@ -24,7 +24,7 @@ def swap_insertion_sort(L):
 
     return L
 
-def shuffle_insertion_sort(L):
+def _shuffle_insertion_sort(L):
     """Do shuffling insertion sort on L and return sorted list."""
 
     for i in range(1, len(L)):
@@ -40,7 +40,7 @@ def shuffle_insertion_sort(L):
     return L
 
 def insertion_sort(L):
-    return shuffle_insertion_sort(L)
+    return _shuffle_insertion_sort(L)
 
 '''
     Optimizations / things that I didn't get on my own:
@@ -50,4 +50,4 @@ def insertion_sort(L):
 if __name__ == "__main__":
     L = [23, 1, 10, 5, 2]
     print(L)
-    print(shuffle_insertion_sort(L))
+    print(insertion_sort(L))
