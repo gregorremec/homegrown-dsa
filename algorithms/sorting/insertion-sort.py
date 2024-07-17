@@ -44,7 +44,7 @@ def insertion_sort(L):
 
 '''
     Optimizations / things that I didn't get on my own:
-    - I made swap insertion sort, but shuffle is the true algo
+    - I made swap insertion sort first but made shuffle bc it is the true algo
 '''
 
 if __name__ == "__main__":
