@@ -21,7 +21,7 @@ def quick_sort(L):
         return L
     
     tpi = 0 # true pivot index
-    spi = random.randint(0, len(L) - 1) # starting pivot index TODO look into randomness optimization
+    spi = len(L) - 1 # starting pivot index
 
     for i in range(len(L) - 1):
         if L[i] <= L[spi]:
@@ -35,8 +35,10 @@ def quick_sort(L):
 
 '''
     Optimizations / things that I didn't get on my own:
-    - random pivot so sorted lists don't ruin performance
-    - TODO I used splicing instead of in place...
+    - TODO random pivot so sorted lists don't ruin performance
+    - TODO I used splicing instead of in place sort
+    - i thought it was stable... maybe not
+    - TODO revist this one.
 '''
 
 if __name__ == "__main__":
