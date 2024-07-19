@@ -12,6 +12,8 @@
     Space: 
 """
 
+import random
+
 def quick_sort(L):
     """Do quick sort on L and return sorted list."""
 
@@ -19,24 +21,25 @@ def quick_sort(L):
         return L
     
     tpi = 0 # true pivot index
-    spi = len(L) - 1 # starting pivot index TODO look into randomness optimization
+    spi = random.randint(0, len(L) - 1) # starting pivot index TODO look into randomness optimization
 
     for i in range(len(L) - 1):
-        if L[i] <= spi:
+        if L[i] <= L[spi]:
             L[i], L[tpi] = L[tpi], L[i] # swap values under the pivot to behind it
             tpi += 1
 
     L[spi], L[tpi] = L[tpi], L[spi] # swap the pivot to it's correct position at the end
 
     
-    return quick_sort(L[:tpi]) + quick_sort(L[tpi:])
+    return quick_sort(L[:tpi]) + [L[tpi]] + quick_sort(L[(tpi+1):]) # python lists maybe not efficient
 
 '''
     Optimizations / things that I didn't get on my own:
-    - 
+    - random pivot so sorted lists don't ruin performance
+    - TODO I used splicing instead of in place...
 '''
 
 if __name__ == "__main__":
-    L = [8, 6, 9, 1]
+    L = [8, 4, 2, 4, 5]
     print(L)
     print(quick_sort(L))
