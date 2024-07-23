@@ -4,7 +4,7 @@ class Queue():
     def __init__(self):
         self.internal_list = []
 
-    def __init__(self, queue):
+    def __init__(self, queue = []):
         self.internal_list = [queue]
 
     def push(self, item):
@@ -23,3 +23,8 @@ class Queue():
 
         return toReturn
 
+
+if __name__ == "__main__":
+    q = Queue()
+    q.push(4)
+    print(q.pop())
