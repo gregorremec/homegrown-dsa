@@ -19,5 +19,7 @@ def generate_primes(start, end):
     
     return primes
 
+#TODO seive of eratosthenis
+
 if __name__ == "__main__":
     print(generate_primes(0, 15))
