@@ -8,7 +8,7 @@
 """
 
 """
-    Time: O(nlogn)
+    Time: O(nlogn) - * for leetcode Q4 learn binary search.
     Space: O(n)
 """
 
