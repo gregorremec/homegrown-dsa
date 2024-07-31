@@ -38,7 +38,7 @@ def quick_sort(L):
     - TODO random pivot so sorted lists don't ruin performance
     - TODO I used splicing instead of in place sort
     - i thought it was stable... maybe not
-    - TODO revist this one
+    - TODO revist this one...
 '''
 
 if __name__ == "__main__":
