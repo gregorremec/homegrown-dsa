@@ -8,8 +8,8 @@
 """
 
 """
-    Time: 
-    Space: 
+    Time: O(nlogn)
+    Space: this one is larger bc it's not in place
 """
 
 import random
